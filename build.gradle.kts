@@ -26,6 +26,7 @@ dependencies {
 
     compileOnly(libs.pv.server)
     compileOnly(libs.pv.proxy)
+    compileOnly("com.destroystokyo.paper:paper-api:1.16.5-R0.1-SNAPSHOT")
 
     shadow(libs.lavaplayer.youtube)
 
@@ -43,6 +44,23 @@ tasks {
     java {
         toolchain.languageVersion.set(JavaLanguageVersion.of(11)) // lavaplayer supports only java 11
         withSourcesJar()
+    }
+
+    jar {
+        duplicatesStrategy = DuplicatesStrategy.INCLUDE
+    }
+
+    processResources {
+        duplicatesStrategy = DuplicatesStrategy.INCLUDE
+        filesMatching("plugin.yml") {
+            filter { line ->
+                if (line.startsWith("depend: [PlasmoVoice]")) {
+                    "softdepend: [PlasmoVoice]"
+                } else {
+                    line
+                }
+            }
+        }
     }
 
     shadowJar {
