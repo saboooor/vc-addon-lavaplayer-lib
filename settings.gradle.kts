@@ -13,4 +13,4 @@ plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
 }
 
-rootProject.name = "pv-addon-lavaplayer-lib"
+rootProject.name = "vc-addon-lavaplayer-lib"

@@ -49,7 +49,7 @@ jobs:
 
     - uses: actions/upload-artifact@v7.0.1
       with:
-        name: pv-addon-lavaplayer-lib
+        name: vc-addon-lavaplayer-lib
         archive: false
         path: |
           build/libs/*.jar
@@ -59,7 +59,7 @@ jobs:
 
     - uses: actions/upload-artifact@v7.0.1
       with:
-        name: pv-addon-lavaplayer-lib
+        name: vc-addon-lavaplayer-lib
         path: |
           build/libs/*.jar
           !build/libs/*-dev.jar

@@ -3,24 +3,24 @@
 <div>
     <a href="https://modrinth.com/mod/plasmo-voice">Plasmo Voice</a>
     <span> | </span>
-    <a href="https://modrinth.com/mod/pv-addon-lavaplayer-lib">Modrinth</a>
+    <a href="https://modrinth.com/mod/vc-addon-lavaplayer-lib">Modrinth</a>
     <span> | </span>
     <a href="https://www.spigotmc.org/resources/plasmo-voice-server.91064/">Spigot</a>
     <span> | </span>
-    <a href="https://github.com/plasmoapp/pv-addon-lavaplayer-lib/">GitHub</a>
+    <a href="https://github.com/plasmoapp/vc-addon-lavaplayer-lib/">GitHub</a>
     <span> | </span>
     <a href="https://discord.com/invite/uueEqzwCJJ">Discord</a>
      <span> | </span>
     <a href="https://www.patreon.com/plasmomc">Patreon</a>
 </div>
 
-# pv-addon-lavaplayer-lib
+# vc-addon-lavaplayer-lib
 
 Add-on bundled with [LavaPlayer fork](https://github.com/lavalink-devs/lavaplayer) library required for some Plasmo Voice add-ons.
 
 ## Installation
 
-1. Download the add-on from [Modrinth](https://modrinth.com/mod/pv-addon-lavaplayer-lib)
+1. Download the add-on from [Modrinth](https://modrinth.com/mod/vc-addon-lavaplayer-lib)
 2. Install the add-on:
    - For Paper, install the library in `~/plugins`.
    - For Fabric or Forge, install the library in `~/mods`.
@@ -34,7 +34,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("su.plo:pv-addon-lavaplayer-lib:1.0.7")
+    compileOnly("su.plo:vc-addon-lavaplayer-lib:1.0.7")
 }
 ```
 ### Groovy DSL
@@ -44,7 +44,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'su.plo:pv-addon-lavaplayer-lib:1.0.7'
+    compileOnly 'su.plo:vc-addon-lavaplayer-lib:1.0.7'
 }
 ```
 
@@ -54,7 +54,7 @@ dependencies {
 @Addon(
     ...
     dependencies = [
-        Dependency(id = "pv-addon-lavaplayer-lib")
+        Dependency(id = "vc-addon-lavaplayer-lib")
     ]
 )
 ```
@@ -63,13 +63,13 @@ dependencies {
 @Addon(
     ...
     dependencies = {
-        @Dependency(id = "pv-addon-lavaplayer-lib")
+        @Dependency(id = "vc-addon-lavaplayer-lib")
     }
 )
 ```
 ## Using with Bukkit plugins
-Add `pv-addon-lavaplayer-lib` to `plugin.yml` `depend`:
+Add `vc-addon-lavaplayer-lib` to `plugin.yml` `depend`:
 ```yaml
 depend:
-  - pv-addon-lavaplayer-lib
+  - vc-addon-lavaplayer-lib
 ```
