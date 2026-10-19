@@ -47,6 +47,7 @@ tasks {
     }
 
     jar {
+        archiveClassifier.set("dev")
         duplicatesStrategy = DuplicatesStrategy.INCLUDE
     }
 
@@ -100,6 +101,17 @@ tasks {
 
     build {
         dependsOn(shadowJar)
+    }
+}
+
+shadow {
+    addShadowVariantIntoJavaComponent = false
+}
+
+listOf("apiElements", "runtimeElements").forEach { configurationName ->
+    configurations[configurationName].outgoing {
+        artifacts.clear()
+        artifact(tasks.shadowJar)
     }
 }
 
